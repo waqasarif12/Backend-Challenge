@@ -1,0 +1,22 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      AWS_ACCESS_KEY_ID: your-access-key
+      AWS_SECRET_ACCESS_KEY: your-secret-key
+      AWS_BUCKET_NAME: your-bucket-name
+      AWS_REGION: your-region
+      DATABASE_URL: postgres://user:password@db:5432/imagedb
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: imagedb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:

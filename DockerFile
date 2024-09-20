@@ -1,0 +1,17 @@
+# Use Node.js official image
+FROM node:14
+
+# Create app directory
+WORKDIR /app
+
+# Copy all files
+COPY . .
+
+# Install dependencies
+RUN npm install
+
+# Expose the port
+EXPOSE 3000
+
+# Start the server
+CMD ["node", "backend/server.js"]
