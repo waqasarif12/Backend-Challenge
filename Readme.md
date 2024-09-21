@@ -11,7 +11,7 @@ Deployment on AWS EC2 Instance
 
 
 
-# BACKEND CODING CHALLENGE STRUCTURE
+# BACKEND CODING CHALLENGE STRUCTURE (Kindly Open Code Editor for this)
 
 .
 ├── config/
